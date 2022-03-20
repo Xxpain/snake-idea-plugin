@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>io.github.xxpain.id</id>
+    <name>ideaSnake</name>
+    <version>1.0</version>
+    <vendor email="supermannopain@gmail.com" url="https://github.com/xxpain/snake-idea-plugin">xxpain</vendor>
+
+    <description><![CDATA[
+       <p>这是一款餐贪吃蛇游戏，enjoy it</p>
+    ]]></description>
+
+    <change-notes>
+        <![CDATA[
+      <ol>
+       <li> V1.0 release.</li>
+     </ol>
+    ]]>
+    </change-notes>
+
+    <idea-version since-build="173.0"/>
+
+    <depends>com.intellij.modules.lang</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="SnakeGame" factoryClass="io.github.xxpain.GameWindowFactory" anchor="right"
+                   />
+    </extensions>
+</idea-plugin>
