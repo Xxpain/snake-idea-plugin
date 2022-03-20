@@ -16,7 +16,7 @@ public class SnakeWin extends JPanel implements ActionListener, KeyListener, Run
     int rx = 0, ry = 0;
     int eat1 = 0, eat2 = 0;
     JDialog dialog = new JDialog();
-    JLabel label = new JLabel("你的分数是" + score);
+    JLabel label = new JLabel("你的分数是" + score, JLabel.CENTER);
     JButton ok = new JButton("结束");
     Random r = new Random();
     JButton newGame, stopGame;
@@ -37,7 +37,15 @@ public class SnakeWin extends JPanel implements ActionListener, KeyListener, Run
         dialog.add(label);
         dialog.add(ok);
         dialog.setSize(200, 200);
-        dialog.setLocation(200, 200);
+
+        //dialog居中
+        Toolkit kit = Toolkit.getDefaultToolkit();
+        Dimension screenSize = kit.getScreenSize();
+        int width = (int) screenSize.getWidth();
+        int height = (int) screenSize.getHeight();
+        int w = dialog.getWidth();
+        int h = dialog.getHeight();
+        dialog.setLocation((width - w) / 2, (height - h) / 2);
         dialog.setVisible(false);
         ok.addActionListener(this);
     }
@@ -136,7 +144,7 @@ public class SnakeWin extends JPanel implements ActionListener, KeyListener, Run
             repaint();
         } else {
             nThread = null;
-            label.setText("你挂了！你的分数是" + score + "。");
+            label.setText("你的分数是" + score);
             dialog.setVisible(true);
         }
 
