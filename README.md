@@ -1,4 +1,4 @@
 # snake-idea-plugin
 idea 贪吃蛇游戏插件
 
-![](https://github.com/Xxpain/snake-idea-plugin/blob/master/img/snake.gif)
+<img src="https://github.com/Xxpain/snake-idea-plugin/blob/master/img/snake.gif" width="50%" height="50%" />
